@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Daily Bake - The Bakes You Love.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 
@@ -14,15 +16,40 @@
             <header>
                 <nav>
                     <div class="navbar">
+                        <ul class="sidebar">
+                            <h1 class="sidebar__heading">Search</h1>
+                            <input class="sidebar__search__input" type="text" placeholder="Pastry...">
+                            <div class="sidebar__divider"></div>
+                            <li><a href="#" class="navbar__order">Order</a></li>
+                            <li><a href="#" class="navbar__products">Products</a></li>
+                            <li><a href="#" class="navbar__about">About</a></li>
+                            <li><a href="#" class="navbar__reviews">Reviews</a></li>
+                            <li><a href="#" class="navbar__contact">Contact</a></li>
+                        </ul>
 
+                        <img src="assets/logo/The Daily Bake.svg" alt="Logo" class="navbar__logo">
+                        <ul class="navbar__menu">
+                            <li><a href="#" class="navbar__order">Order</a></li>
+                            <li><a href="#" class="navbar__products">Products</a></li>
+                            <li><a href="#" class="navbar__about">About</a></li>
+                            <li><a href="#" class="navbar__reviews">Reviews</a></li>
+                            <li><a href="#" class="navbar__contact">Contact</a></li>
+                            <li><img src="assets/icons/search.png" alt="Search" class="navbar__search"></li>
+                        </ul>
+                        <img src="assets/icons/menu.png" alt="Menu" class="navbar__mobile__icon">
                     </div>
                 </nav>
+                <div class="sidebar__overlay"></div>
             </header>
 
-            <div class="hero-content">
-
+            <div class="hero__content">
+                <h1 class="hero__title">The Bakes You Love.</h1>
+                <p class="hero__desc">Freshly baked treats, made with care
+                    every single day.</p>
+                <button class="hero__button">Explore Our Menu</button>
             </div>
-            
+
+
         </section>
 
         <section class="our-products">
@@ -44,10 +71,13 @@
         <section class="cta">
 
         </section>
+
+
     </main>
     <footer>
 
     </footer>
+    <script src="main.js"></script>
 </body>
 
 </html>
