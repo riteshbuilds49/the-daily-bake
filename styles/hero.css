@@ -1,171 +1,197 @@
-.hero {
-    width: 100%;
-    height: 22.25rem;
-    background-image: url(../assets/images/hero-img.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 55% center;
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: var(--space-20);
-    margin-bottom: clamp(44px, 8vw, 272px);
-}
-
-.navbar__logo {
-    width: clamp(96px, 12vw, 256px);
-}
-
-.navbar__menu {
-    display: none;
-}
-
-.navbar__mobile__icon {
-    width: clamp(26px, 4vw, 56px);
-}
-
-.sidebar {
-    position: fixed;
-    right: 0;
-    top: 0;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 24px;
-    gap: 30px;
-    height: 100vh;
-    border-radius: var(--radius-lg) 0px 0px var(--radius-lg);
-    width: 280px;
-    background-color: var(--color-card);
-    list-style: none;
-    z-index: 20;
-}
-
-.sidebar__overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 10;
-}
-
-.sidebar--isopen {
-    display: flex;
-    transform: translateX(0%);
-}
-
-/* If sidebar__overlay contains sidebar--isopen class than turn it's display type to block in otherwords give me an element which have these both classes */
-.sidebar__overlay.sidebar--isopen {
-    display: block;
-}
-
-.sidebar__search__input {
-    border: 1px solid #ccc;
-    border-radius: var(--radius-lg);
-    padding: 10px;
-    width: 70%;
-    height: 34px;
-}
-
-.sidebar__heading {
-    font-family: var(--font-heading);
-    font-weight: 600;
-    color: var(--color-primary)
-}
-
-.sidebar__divider {
-    height: 1px;
-    width: 75%;
-    background-color: var(--color-primary);
-}
-
-.sidebar a {
-    text-decoration: none;
-    color: var(--color-text);
-    font-family: var(--font-body);
-    font-size: clamp(16px, 2.5vw, 20px);
-}
-
-.hero__content {
-    margin-left: clamp(12px, 2vw, 40px);
-}
-
-.hero__title {
-    font-family: var(--font-heading);
-    font-size: clamp(28px, 8vw, 124px);
-    color: var(--color-text);
-    line-height: 1.1;
-    margin-bottom: clamp(12px, 3vw, 26px);
-    width: clamp(175px, 40vw, 800px);
-}
-
-.hero__desc {
-    font-family: var(--font-body);
-    font-size: clamp(16px, 3vw, 36px);
-    color: var(--color-text);
-    margin-bottom: clamp(16px, 4vw, 36px);
-    width: clamp(175px, 44vw, 600px);
-}
-
-.hero__button {
-    border: none;
-    border-radius: clamp(30px, 4vw, 30px);
-    color: var(--color-card);
-    font-size: clamp(14px, 1.4vw, 22px);
-    font-family: var(--font-body);
-    background-color: var(--color-primary);
-    padding: clamp(8px, 2vw, 16px) clamp(12px, 4vw, 24px);
-}
-
-@media (min-width: 560px) {
     .hero {
-        height: 26rem;
+        width: 100%;
+        height: 22.25rem;
+        background-image: url(../assets/images/hero-img.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 55% center;
+        z-index: 4;
+        position: relative;
     }
-}
 
-@media (min-width: 700px) {
-    .hero {
-        height: 32rem;
+    header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
     }
-}
 
-@media (min-width: 920px) {
-    .hero {
-        height: 126vh;
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--space-20);
+        margin-bottom: clamp(44px, 8vw, 272px);
+    }
+
+    .navbar__logo {
+        width: clamp(96px, 12vw, 256px);
     }
 
     .navbar__menu {
-        display: flex;
-        gap: var(--text-32);
-        list-style: none;
-    }
-
-    .navbar__search {
-        width: var(--text-20);
-    }
-
-    .navbar__menu a {
-        text-decoration: none;
-        font-size: clamp(14px, 1.5vw, 18px);
-        font-family: var(--font-body);
-        font-weight: 500;
-        color: var(--color-text);
+        display: none;
     }
 
     .navbar__mobile__icon {
-        display: none;
+        width: clamp(26px, 4vw, 56px);
     }
 
     .sidebar {
-        display: none;
+        position: fixed;
+        right: 0;
+        top: 0;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: var(--space-24);
+        gap: var(--space-32);
+        height: 100vh;
+        border-radius: var(--radius-lg) 0px 0px var(--radius-lg);
+        width: 16rem;
+        background-color: var(--color-card);
+        list-style: none;
+        z-index: 20;
     }
 
-    .sidebar__overlay.sidebar--isopen {
+    .sidebar__overlay {
         display: none;
+        position: fixed;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 10;
     }
-}
+
+    .sidebar--isopen {
+        display: flex;
+        transform: translateX(0%);
+    }
+
+    /* If sidebar__overlay contains sidebar--isopen class than turn it's display type to block in otherwords give me an element which have these both classes */
+    .sidebar__overlay.sidebar--isopen {
+        display: block;
+    }
+
+    .sidebar__search__input {
+        border: 1px solid #ccc;
+        border-radius: var(--radius-lg);
+        padding: var(--space-12);
+        width: 70%;
+        height: var(--space-32);
+    }
+
+    .sidebar__heading {
+        font-family: var(--font-heading);
+        font-weight: 600;
+        color: var(--color-primary)
+    }
+
+    .sidebar__divider {
+        height: 0.1rem;
+        width: 75%;
+        background-color: var(--color-primary);
+    }
+
+    .sidebar__links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: var(--space-24);
+        gap: var(--space-32);
+    }
+
+    .sidebar__links a {
+        text-decoration: none;
+        color: var(--color-text);
+        font-family: var(--font-body);
+        font-size: clamp(16px, 2.5vw, 20px);
+    }
+
+    .hero__content {
+        margin-left: clamp(12px, 2vw, 40px);
+        padding-top: clamp(140px, 20vw, 2000px);
+    }
+
+    .hero__title {
+        font-family: var(--font-heading);
+        font-size: clamp(28px, 8vw, 124px);
+        color: var(--color-text);
+        line-height: 1.1;
+        margin-bottom: clamp(12px, 3vw, 26px);
+        width: clamp(175px, 40vw, 800px);
+    }
+
+    .hero__desc {
+        font-family: var(--font-body);
+        font-size: clamp(16px, 3vw, 36px);
+        color: var(--color-text);
+        margin-bottom: clamp(16px, 4vw, 36px);
+        width: clamp(175px, 44vw, 600px);
+    }
+
+    .hero__button {
+        border: none;
+        border-radius: clamp(30px, 4vw, 30px);
+        color: var(--color-card);
+        font-size: clamp(14px, 1.4vw, 22px);
+        font-family: var(--font-body);
+        background-color: var(--color-primary);
+        padding: clamp(8px, 2vw, 16px) clamp(12px, 4vw, 24px);
+    }
+
+    @media (min-width: 560px) {
+        .hero {
+            height: 26rem;
+        }
+    }
+
+    @media (min-width: 680px) {
+        .hero {
+            height: 32rem;
+        }
+    }
+
+    @media (min-width: 880px) {
+        .hero {
+            height: 126vh;
+        }
+
+        .navbar__menu {
+            display: flex;
+            gap: var(--text-32);
+            list-style: none;
+        }
+
+        .navbar__search {
+            width: var(--text-20);
+        }
+
+        .navbar__menu a {
+            text-decoration: none;
+            font-size: clamp(14px, 1.5vw, 18px);
+            font-family: var(--font-body);
+            font-weight: 500;
+            color: var(--color-text);
+        }
+
+        .navbar__mobile__icon {
+            display: none;
+        }
+
+        .sidebar {
+            display: none;
+        }
+
+        .sidebar__overlay.sidebar--isopen {
+            display: none;
+        }
+    }
+
+    @media (min-width: 1400px) {
+        .hero {
+            height: 134vh;
+        }
+    }

@@ -13,49 +13,123 @@
 </head>
 
 <body>
+    <header>
+        <nav>
+            <div class="navbar">
+                <div class="sidebar">
+                    <h2 class="sidebar__heading">Search</h2>
+                    <input class="sidebar__search__input" type="text" placeholder="Pastry...">
+                    <div class="sidebar__divider"></div>
+                    <ul class="sidebar__links">
+                        <li><a href="#" class="navbar__order">Order</a></li>
+                        <li><a href="#" class="navbar__products">Products</a></li>
+                        <li><a href="#" class="navbar__about">About</a></li>
+                        <li><a href="#" class="navbar__reviews">Reviews</a></li>
+                        <li><a href="#" class="navbar__contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <img src="assets/logo/The Daily Bake.svg" alt="Logo" class="navbar__logo">
+                <ul class="navbar__menu">
+                    <li><a href="#" class="navbar__order">Order</a></li>
+                    <li><a href="#" class="navbar__products">Products</a></li>
+                    <li><a href="#" class="navbar__about">About</a></li>
+                    <li><a href="#" class="navbar__reviews">Reviews</a></li>
+                    <li><a href="#" class="navbar__contact">Contact</a></li>
+                    <li><img src="assets/icons/search.png" alt="Search" class="navbar__search"></li>
+                </ul>
+                <img src="assets/icons/menu.png" alt="Menu" class="navbar__mobile__icon">
+            </div>
+        </nav>
+        <div class="sidebar__overlay"></div>
+    </header>
+
     <main>
         <section class="hero">
-            <header>
-                <nav>
-                    <div class="navbar">
-                        <ul class="sidebar">
-                            <h1 class="sidebar__heading">Search</h1>
-                            <input class="sidebar__search__input" type="text" placeholder="Pastry...">
-                            <div class="sidebar__divider"></div>
-                            <li><a href="#" class="navbar__order">Order</a></li>
-                            <li><a href="#" class="navbar__products">Products</a></li>
-                            <li><a href="#" class="navbar__about">About</a></li>
-                            <li><a href="#" class="navbar__reviews">Reviews</a></li>
-                            <li><a href="#" class="navbar__contact">Contact</a></li>
-                        </ul>
-
-                        <img src="assets/logo/The Daily Bake.svg" alt="Logo" class="navbar__logo">
-                        <ul class="navbar__menu">
-                            <li><a href="#" class="navbar__order">Order</a></li>
-                            <li><a href="#" class="navbar__products">Products</a></li>
-                            <li><a href="#" class="navbar__about">About</a></li>
-                            <li><a href="#" class="navbar__reviews">Reviews</a></li>
-                            <li><a href="#" class="navbar__contact">Contact</a></li>
-                            <li><img src="assets/icons/search.png" alt="Search" class="navbar__search"></li>
-                        </ul>
-                        <img src="assets/icons/menu.png" alt="Menu" class="navbar__mobile__icon">
-                    </div>
-                </nav>
-                <div class="sidebar__overlay"></div>
-            </header>
-
             <div class="hero__content">
                 <h1 class="hero__title">The Bakes You Love.</h1>
                 <p class="hero__desc">Freshly baked treats, made with care
                     every single day.</p>
                 <button class="hero__button">Explore Our Menu</button>
             </div>
-
-
         </section>
 
         <section class="our-products">
+            <div class="our__products__content">
+                <img src="assets/images/sketch-cookies.png" alt="Sketch">
+                <h2>Our Products</h2>
+                <div class="product__cards">
+                    <div class="basic__product__card">
+                        <img src="assets/images/menu-img-1.jpg" alt="Pastry">
+                        <p>Pastries</p>
+                        <div class="divider"></div>
+                        <div class="product__row">
+                            <p>Chocolate Pastry</p>
+                            <p>₹120</p>
+                        </div>
+                        <div class="product__row">
+                            <p>Black Forest Pastry</p>
+                            <p>₹130</p>
+                        </div>
+                        <div class="product__row">
+                            <p>Pineapple Pastry</p>
+                            <p>₹140</p>
+                        </div>
+                    </div>
+                    <div class="basic__product__card">
+                        <img src="assets/images/menu-img-2.jpg" alt="Bread">
+                        <p>Breads</p>
+                        <div class="divider"></div>
+                        <div class="product__row">
+                            <p>Whole Wheat Bread</p>
+                            <p>₹150</p>
+                        </div>
+                        <div class="product__row">
+                            <p>Multigrain Bread</p>
+                            <p>₹180</p>
+                        </div>
+                        <div class="product__row">
+                            <p>Sourdough Bread</p>
+                            <p>₹220</p>
+                        </div>
+                    </div>
+                    <div class="basic__product__card">
+                        <img src="assets/images/menu-img-3.jpg" alt="Cookies">
+                        <p>Cookies</p>
+                        <div class="divider"></div>
+                        <div class="product__row">
+                            <p>Almond Cookies</p>
+                            <p>₹350</p>
+                        </div>
+                        <div class="product__row">
+                            <p>Butter Cookies</p>
+                            <p>₹380</p>
+                        </div>
+                        <div class="product__row">
+                            <p>Choco Chip Cookies</p>
+                            <p>₹430</p>
+                        </div>
+                    </div>
+                    <div class="basic__product__card">
+                        <img src="assets/images/menu-img-4.jpg" alt="Brownies">
+                        <p>Brownies</p>
+                        <div class="divider"></div>
+                        <div class="product__row">
+                            <p>Walnut Brownie</p>
+                            <p>₹130</p>
+                        </div>
+                        <div class="product__row">
+                            <p>Overload Brownie</p>
+                            <p>₹145</p>
+                        </div>
+                        <div class="product__row">
+                            <p>Millionare Brownie</p>
+                            <p>₹175</p>
+                        </div>
+                    </div>
 
+                </div>
+            </div>
         </section>
 
         <section class="about-us">
