@@ -1,0 +1,204 @@
+.about__us__heading {
+    font-family: var(--font-heading);
+    font-weight: bold;
+    font-size: clamp(30px, 7vw, 64px);
+    color: var(--color-primary);
+    margin-top: clamp(80px, 5vw, 200px);
+    display: flex;
+    justify-content: center;
+}
+
+.about__us__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.about__us__img {
+    width: clamp(280px, 75vw, 560px);
+    margin-top: clamp(40px, 6vw, 70px);
+    border-radius: clamp(10px, 1vw, 14px);
+}
+
+.about__us__content__h3--1 {
+    margin-top: clamp(30px, 6vw, 50px);
+    font-family: var(--font-heading);
+    color: var(--color-text);
+    font-size: clamp(32px, 6vw, 60px);
+}
+
+.about__us__content__h3--2 {
+    font-family: var(--font-heading);
+    color: var(--color-text);
+    font-size: clamp(32px, 6vw, 60px);
+}
+
+.about__us__content__divider {
+    margin-top: clamp(16px, 4vw, 28px);
+    background-color: var(--color-primary);
+    height: 0.2rem;
+    width: clamp(220px, 44vw, 540px);
+}
+
+.about__us__content__p__1 {
+    width: clamp(270px, 80vw, 800px);
+    line-height: 1.6;
+    margin-top: 2rem;
+    font-family: var(--font-body);
+    text-align: center;
+    color: var(--color-text);
+    font-size: clamp(20px, 4vw, 24px);
+    font-weight: 500;
+}
+
+.about__us__content__p__2 {
+    width: clamp(270px, 80vw, 800px);
+    line-height: 1.6;
+    margin-top: 1rem;
+    font-family: var(--font-body);
+    text-align: center;
+    color: var(--color-text);
+    font-size: clamp(20px, 4vw, 24px);
+    font-weight: 500;
+}
+
+.sketch__3 {
+    width: clamp(120px, 15vw, 200px);
+    filter: opacity(0.3);
+    position: absolute;
+    top: 98%;
+    left: -1.2rem;
+    transform: rotateZ(20deg);
+    z-index: 0;
+}
+
+.benifits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    margin-top: 120px;
+    gap: 50px;
+}
+
+.quality__ingredients,
+.fresh__baked,
+.made__with__love,
+.our__community {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+}
+
+.benifits li img {
+    width: 40px;
+    z-index: 1;
+}
+
+.benifits li h4 {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    color: var(--color-text);
+    margin-top: 14px;
+}
+
+.benifits li p {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--color-text);
+    width: 140px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.benifits__divider {
+    margin-top: 30px;
+    height: 2px;
+    width: 160px;
+    background-color: var(--color-primary);
+}
+
+.quality__ingredients__image__bg {
+    position: absolute;
+    top: -17px;
+    left: 43px;
+    z-index: 0;
+    filter: opacity(0.2);
+    width: 70px;
+    height: 70px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+}
+
+.fresh__baked__image__bg {
+    position: absolute;
+    top: -13px;
+    left: 44px;
+    z-index: 0;
+    filter: opacity(0.2);
+    width: 70px;
+    height: 70px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+}
+
+.made__with__love__image__bg {
+    position: absolute;
+    top: -19px;
+    left: 45px;
+    z-index: 0;
+    filter: opacity(0.2);
+    width: 70px;
+    height: 70px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+}
+
+.our__community__image__bg {
+    position: absolute;
+    top: -15px;
+    left: 36px;
+    z-index: 0;
+    filter: opacity(0.2);
+    width: 70px;
+    height: 70px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+}
+
+@media (min-width: 680px) {}
+
+@media (min-width: 1024px) {
+    .about__us__img {
+        width: clamp(700px, 64vw, 950px);
+    }
+
+    .about__us__content__h3--1 {
+        margin-top: clamp(30px, 6vw, 50px);
+        font-size: clamp(70px, 6vw, 80px);
+    }
+
+    .about__us__content__h3--2 {
+        font-size: clamp(70px, 6vw, 80px);
+    }
+
+    .about__us__content__divider {
+        margin-top: clamp(16px, 4vw, 28px);
+    }
+
+    .about__us__content__p__1 {
+        width: clamp(270px, 80vw, 1040px);
+        margin-top: 3rem;
+        font-size: clamp(16px, 3vw, 24px);
+    }
+
+    .about__us__content__p__2 {
+        width: clamp(270px, 80vw, 940px);
+        margin-top: 1.5rem;
+        font-size: clamp(16px, 3vw, 24px);
+    }
+}
