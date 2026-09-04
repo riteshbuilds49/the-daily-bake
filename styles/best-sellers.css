@@ -1,0 +1,63 @@
+.best__sellers__heading {
+    font-family: var(--font-heading);
+    font-weight: bold;
+    font-size: clamp(30px, 7vw, 64px);
+    color: var(--color-primary);
+    margin-top: clamp(80px, 5vw, 200px);
+    display: flex;
+    justify-content: center;
+}
+
+.best__seller__cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: clamp(40px, 6vw, 70px);
+    gap: clamp(30px, 8vw, 44px);
+}
+
+.best__seller__card {
+    height: clamp(100px, 24vw, 140px);
+    width: clamp(300px, 80vw, 500px);
+    background-color: var(--color-card);
+    border-radius: clamp(10px, 2vw, 16px);
+    display: flex;
+    padding: 0.5rem;
+    gap: clamp(12px, 4vw, 20px);
+}
+
+.best__seller__card img {
+    width: clamp(100px, 24vw, 140px);
+    border-radius: clamp(8px, 2vw, 14px);
+}
+
+.best__sellers__text__section {
+    display: flex;
+    flex-direction: column;
+}
+
+.best__sellers__text__section h4 {
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+    font-size: clamp(20px, 5vw, 26px);
+    position: relative;
+}
+
+.best__sellers__text__section h4::after {
+    content: "";
+    position: absolute;
+    width: clamp(140px, 30vw, 170px);
+    height: 1px;
+    top: 105%;
+    left: 0;
+    background-color: var(--color-primary);
+}
+
+.best__sellers__text__section p {
+    margin-top: clamp(10px, 2vw, 14px);
+    width: clamp(190px, 50vw, 300px);
+    font-family: var(--font-body);
+    font-size: clamp(14px, 3vw, 20px);
+}
+
+@media (min-width: 680px) {}
