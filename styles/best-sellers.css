@@ -22,7 +22,7 @@
 
 .best__seller__card {
     height: clamp(100px, 24vw, 140px);
-    width: clamp(300px, 80vw, 500px);
+    width: clamp(300px, 80vw, 460px);
     background-color: var(--color-card);
     border-radius: clamp(10px, 2vw, 16px);
     display: flex;
@@ -52,7 +52,7 @@
     position: absolute;
     width: clamp(140px, 30vw, 170px);
     height: 1px;
-    top: 105%;
+    top: 110%;
     left: 0;
     background-color: var(--color-primary);
 }
@@ -77,35 +77,22 @@
 @media (min-width: 1024px) {
     .best__seller__cards {
         display: grid;
-        grid-template-columns: 350px 350px;
+        grid-template-columns: repeat(2, 480px);
         justify-content: center;
+        justify-items: center;
+        gap: 2rem;
     }
 
     .best__seller__card {
-        height: clamp(110px, 24vw, 140px);
-        width: clamp(330px, 80vw, 500px);
+        height: clamp(110px, 15vw, 150px);
+        width: clamp(340px, 43vw, 440px);
         border-radius: clamp(12px, 2vw, 16px);
         gap: clamp(14px, 4vw, 20px);
     }
 
-    .best__seller__card img {
-        width: clamp(100px, 24vw, 140px);
-        border-radius: clamp(8px, 2vw, 14px);
-    }
-
-    .best__sellers__text__section h4 {
-        font-size: clamp(20px, 5vw, 26px);
-    }
-
-    .best__sellers__text__section h4::after {
-        width: clamp(140px, 30vw, 170px);
-        top: 105%;
-        left: 0;
-    }
-
     .best__sellers__text__section p {
         margin-top: clamp(10px, 2vw, 14px);
-        width: clamp(190px, 50vw, 300px);
-        font-size: clamp(14px, 3vw, 20px);
+        width: clamp(190px, 24vw, 250px);
+        font-size: clamp(16px, 1.8vw, 20px);
     }
 }
