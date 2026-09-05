@@ -1,3 +1,7 @@
+.about-us {
+    position: relative;
+}
+
 .about__us__heading {
     font-family: var(--font-heading);
     font-weight: bold;
@@ -166,7 +170,7 @@
     width: clamp(120px, 15vw, 200px);
     filter: opacity(0.3);
     position: absolute;
-    top: 230%;
+    top: 98%;
     left: -1.2rem;
     transform: rotateZ(20deg);
     z-index: 0;
@@ -218,7 +222,7 @@
     }
 
     .sketch__3 {
-        margin-top: -80%;
+        margin-top: 0%;
     }
 
 }
@@ -280,6 +284,6 @@
     }
 
     .sketch__3 {
-        margin-top: -90%;
+        margin-top: 2%;
     }
 }

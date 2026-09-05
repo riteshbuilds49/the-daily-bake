@@ -1,3 +1,7 @@
+.best-sellers {
+    position: relative;
+}
+
 .best__sellers__heading {
     font-family: var(--font-heading);
     font-weight: bold;
@@ -60,4 +64,48 @@
     font-size: clamp(14px, 3vw, 20px);
 }
 
-@media (min-width: 680px) {}
+.sketch__4 {
+    width: clamp(120px, 15vw, 200px);
+    filter: opacity(0.3);
+    position: absolute;
+    top: 100%;
+    right: -1.2rem;
+    transform: rotateZ(340deg);
+    z-index: 0;
+}
+
+@media (min-width: 1024px) {
+    .best__seller__cards {
+        display: grid;
+        grid-template-columns: 350px 350px;
+        justify-content: center;
+    }
+
+    .best__seller__card {
+        height: clamp(110px, 24vw, 140px);
+        width: clamp(330px, 80vw, 500px);
+        border-radius: clamp(12px, 2vw, 16px);
+        gap: clamp(14px, 4vw, 20px);
+    }
+
+    .best__seller__card img {
+        width: clamp(100px, 24vw, 140px);
+        border-radius: clamp(8px, 2vw, 14px);
+    }
+
+    .best__sellers__text__section h4 {
+        font-size: clamp(20px, 5vw, 26px);
+    }
+
+    .best__sellers__text__section h4::after {
+        width: clamp(140px, 30vw, 170px);
+        top: 105%;
+        left: 0;
+    }
+
+    .best__sellers__text__section p {
+        margin-top: clamp(10px, 2vw, 14px);
+        width: clamp(190px, 50vw, 300px);
+        font-size: clamp(14px, 3vw, 20px);
+    }
+}
