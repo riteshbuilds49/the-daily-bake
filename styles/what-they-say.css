@@ -13,45 +13,86 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: clamp(26px, 12vw, 250px);
+    gap: clamp(32px, 9vw, 250px);
 }
 
-.comment__card {
-    height: clamp(220px, 50vw, 400px);
-    width: clamp(200px, 50vw, 370px);
+.what__they__say__comment__card {
+    /* height: clamp(272px, 59vw, 434px); */
+    padding-top: clamp(8px, 2vw, 12px);
+    padding-bottom: clamp(8px, 2vw, 14px);
+    width: clamp(230px, 64vw, 390px);
     background-color: var(--color-card);
     border-radius: clamp(18px, 4vw, 30px);
     margin-left: clamp(16px, 4vw, 32px);
     position: relative;
 }
 
-.profile__container {
+.what__they__say__profile__img {
     position: absolute;
-    height: clamp(180px, 38vw, 360px);
-    width: clamp(90px, 20vw, 160px);
-    background-color: var(--color-primary);
+    height: clamp(180px, 40vw, 300px);
+    width: clamp(80px, 18vw, 140px);
+    object-fit: cover;
     z-index: 1;
     border-radius: 99px;
-    left: 35%;
-    transform: translateX(-85%);
+    top: 15%;
+    left: 0%;
+    transform: translateX(-50%);
 }
 
-.arrow__left {
+.what__they__say__start__section {
+    margin-left: clamp(52px, 12vw, 84px);
+    margin-top: clamp(6px, 2vw, 14px);
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: clamp(8px, 2vw, 16px);
+}
+
+.quote__img {
+    width: clamp(40px, 10vw, 80px);
+    filter: opacity(0.6);
+    margin-left: -20px
+}
+
+.review {
+    font-family: var(--font-body);
+    font-size: clamp(13.5px, 3.4vw, 24px);
+    width: clamp(130px, 45vw, 300px);
+    line-height: 1.6;
+}
+
+.what__they__say__end__section {
+    margin-top: clamp(8px, 3vw, 16px);
+    margin-right: clamp(14px, 4vw, 22px);
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: clamp(4px, 1.1vw, 8px);
+}
+
+.what__they__say__username {
+    font-size: clamp(18px, 4vw, 26px);
+    font-weight: bold;
+    font-family: var(--font-heading);
+    color: var(--color-primary);
+}
+
+.what__they__say__city {
+    font-size: clamp(16px, 4vw, 24px);
+    font-family: var(--font-body);
+}
+
+.what__they__say__arrow__left {
     width: clamp(24px, 6vw, 36px);
     height: clamp(24px, 6vw, 36px);
 }
 
-.arrow__right {
+.what__they__say__arrow__right {
     width: clamp(24px, 6vw, 36px);
     height: clamp(24px, 6vw, 36px);
     transform: scaleX(-1);
 }
 
-/* @media (min-width: 768px) {
-    .what__they__say__content {
-        left: 35%;
-        transform: translateX(-85%);
-    }
-} */
+@media (min-width: 768px) {}
 
 @media (min-width: 1024px) {}
