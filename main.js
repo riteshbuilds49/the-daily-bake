@@ -4,12 +4,10 @@ let menuButton = document.querySelector(".navbar__mobile__icon");
 let sidebar = document.querySelector(".sidebar");
 let sidebarOverlay = document.querySelector(".sidebar__overlay");
 let orderOnlineButton1 = document.querySelector(".order__online__button__1")
-let reviewLeftButton = document.querySelector(".what__they__say__arrow__left")
 let reviewImg = document.querySelector(".what__they__say__profile__img");
 let review = document.querySelector(".review");
 let username = document.querySelector(".what__they__say__username");
 let city = document.querySelector(".what__they__say__city");
-let reviewRightButton = document.querySelector(".what__they__say__arrow__right")
 
 let currentReviewIndex = 0;
 
@@ -41,12 +39,6 @@ orderOnlineButton1.addEventListener('click', () => {
     window.open('https://wa.me/+918085679315')
 })
 
-reviewLeftButton.addEventListener('click', () => {
-    currentReviewIndex = (currentReviewIndex - 1 + reviews.length) % reviews.length;
-    console.log(currentReviewIndex);
-    renderReviewCards()
-})
-
 function renderReviewCards() {
     reviewImg.src = reviews[currentReviewIndex].img
     review.innerText = reviews[currentReviewIndex].review
@@ -54,10 +46,62 @@ function renderReviewCards() {
     city.innerText = reviews[currentReviewIndex].city
 }
 
-reviewRightButton.addEventListener('click', () => {
-    currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
-    console.log(currentReviewIndex)
+renderReviewCards()
+
+function animateReviewCard() {
+    let commentCard = document.querySelector(".what__they__say__comment__card");
+    commentCard.style.filter = "opacity(0)";
+
+    setTimeout(() => {
+        commentCard.style.filter = "opacity(1)";
+    }, 500);
+}
+
+
+let dot1 = document.querySelector(".dot__1");
+
+dot1.addEventListener('click', () => {
+    currentReviewIndex = 0;
+    dot1.classList.add("active--dot")
+    dot2.classList.remove("active--dot")
+    dot3.classList.remove("active--dot")
+    dot4.classList.remove("active--dot")
+    animateReviewCard()
     renderReviewCards()
 })
 
-renderReviewCards()
+let dot2 = document.querySelector(".dot__2");
+
+dot2.addEventListener('click', () => {
+    currentReviewIndex = 1;
+    dot2.classList.add("active--dot")
+    dot1.classList.remove("active--dot")
+    dot3.classList.remove("active--dot")
+    dot4.classList.remove("active--dot")
+    animateReviewCard()
+    renderReviewCards()
+})
+
+let dot3 = document.querySelector(".dot__3");
+
+dot3.addEventListener('click', () => {
+    currentReviewIndex = 2;
+    dot3.classList.add("active--dot")
+    dot1.classList.remove("active--dot")
+    dot2.classList.remove("active--dot")
+    dot4.classList.remove("active--dot")
+    animateReviewCard()
+    renderReviewCards()
+})
+
+let dot4 = document.querySelector(".dot__4");
+
+dot4.addEventListener('click', () => {
+    currentReviewIndex = 3;
+    dot4.classList.add("active--dot")
+    dot1.classList.remove("active--dot")
+    dot2.classList.remove("active--dot")
+    dot3.classList.remove("active--dot")
+    animateReviewCard()
+    renderReviewCards()
+})

@@ -64,7 +64,7 @@
     font-size: clamp(14px, 3vw, 20px);
 }
 
-.sketch__4 {
+.best__sellers__sketch {
     width: clamp(120px, 15vw, 200px);
     filter: opacity(0.3);
     position: absolute;
@@ -96,7 +96,7 @@
         font-size: clamp(16px, 1.8vw, 20px);
     }
 
-    .sketch__4 {
+    .best__sellers__sketch {
         top: 92%;
     }
 }
