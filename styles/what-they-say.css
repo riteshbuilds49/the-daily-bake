@@ -61,6 +61,7 @@
     font-family: var(--font-body);
     font-size: clamp(13.5px, 3.4vw, 24px);
     width: clamp(130px, 45vw, 300px);
+    color: var(--color-text);
     line-height: 1.6;
 }
 
@@ -70,6 +71,7 @@
     display: flex;
     flex-direction: column;
     align-items: end;
+    color: var(--color-text);
     gap: clamp(4px, 1.1vw, 8px);
 }
 
@@ -83,6 +85,7 @@
 .what__they__say__city {
     font-size: clamp(16px, 4vw, 24px);
     font-family: var(--font-body);
+    color: var(--color-text);
 }
 
 .dots__container {
@@ -115,7 +118,7 @@
     filter: opacity(0.3);
     position: absolute;
     z-index: 0;
-    top: 100%;
+    top: 85%;
     left: -2rem;
 }
 

@@ -1,4 +1,4 @@
-let reviews = [{ img: "assets/images/reviewer-1.jpg", name: "Ishita Singh", city: "Ahmedabad", review: "“The cakes were really fresh and tasty, and the staff was very polite. Overall, I had a very nice experience here.”" }, { img: "assets/images/reviewer-2.jpg", name: "Karan Gokhale", city: "Mumbai", review: "“Loved the ambience and the quality of bakery items. Everything was fresh, nicely presented, and the service was also very good.”" }, { img: "assets/images/reviewer-3.jpg", name: "Prashant Dubey", city: "Cochin", review: "“I ordered a cake for my family and everyone loved it. Taste was excellent, delivery was on time, and the staff was very helpful.”" }, { img: "assets/images/reviewer-4.jpg", name: "Preeti Prajapati", city: "Srinagar", review: "“Really happy with my visit. The pastries were fresh, the place was clean and peaceful, and the overall experience was totally worth it.”" }]
+let reviews = [{ img: "assets/images/reviewer-1.jpg", name: "Ishita Singh", city: "Ahmedabad", review: "“The cakes were really fresh and tasty, and the staff was very polite. Overall, I had a very nice experience here.”", alt: "Reviewer 1" }, { img: "assets/images/reviewer-2.jpg", name: "Karan Gokhale", city: "Mumbai", review: "“Loved the ambience and the quality of bakery items. Everything was fresh, nicely presented, and the service was also very good.”", alt: "Reviewer 2" }, { img: "assets/images/reviewer-3.jpg", name: "Prashant Dubey", city: "Cochin", review: "“I ordered a cake for my family and everyone loved it. Taste was excellent, delivery was on time, and the staff was very helpful.”", alt: "Reviewer 3" }, { img: "assets/images/reviewer-4.jpg", name: "Preeti Prajapati", city: "Srinagar", review: "“Really happy with my visit. The pastries were fresh, the place was clean and peaceful, and the overall experience was totally worth it.”", alt: "Reviewer 4" }]
 
 let menuButton = document.querySelector(".navbar__mobile__icon");
 let sidebar = document.querySelector(".sidebar");
@@ -35,12 +35,21 @@ menuButton.addEventListener("click", () => {
 
 sidebarOverlay.addEventListener("click", closeSidebar);
 
+let navbarOrderButton = document.querySelectorAll(".navbar__order");
+
+navbarOrderButton.forEach((button) => {
+    button.addEventListener('click', () => {
+        window.open('https://wa.me/+918085679315');
+    })
+});
+
 orderOnlineButton1.addEventListener('click', () => {
-    window.open('https://wa.me/+918085679315')
+    window.open('https://wa.me/+918085679315');
 })
 
 function renderReviewCards() {
     reviewImg.src = reviews[currentReviewIndex].img
+    reviewImg.alt = reviews[currentReviewIndex].alt
     review.innerText = reviews[currentReviewIndex].review
     username.innerText = reviews[currentReviewIndex].name
     city.innerText = reviews[currentReviewIndex].city
@@ -105,3 +114,15 @@ dot4.addEventListener('click', () => {
     animateReviewCard()
     renderReviewCards()
 })
+
+let ctaOrderButtonMobile = document.querySelector(".cta__order__button__ofcontent");
+let ctaOrderButtonPc = document.querySelector(".cta__order__button");
+
+ctaOrderButtonMobile.addEventListener('click', () => {
+    window.open('https://wa.me/+918085679315');
+})
+
+ctaOrderButtonPc.addEventListener('click', () => {
+    window.open('https://wa.me/+918085679315');
+})
+
