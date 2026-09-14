@@ -1,13 +1,8 @@
-let reviews = [{ img: "assets/images/reviewer-1.jpg", name: "Ishita Singh", city: "Ahmedabad", review: "“The cakes were really fresh and tasty, and the staff was very polite. Overall, I had a very nice experience here.”", alt: "Reviewer 1" }, { img: "assets/images/reviewer-2.jpg", name: "Karan Gokhale", city: "Mumbai", review: "“Loved the ambience and the quality of bakery items. Everything was fresh, nicely presented, and the service was also very good.”", alt: "Reviewer 2" }, { img: "assets/images/reviewer-3.jpg", name: "Prashant Dubey", city: "Cochin", review: "“I ordered a cake for my family and everyone loved it. Taste was excellent, delivery was on time, and the staff was very helpful.”", alt: "Reviewer 3" }, { img: "assets/images/reviewer-4.jpg", name: "Preeti Prajapati", city: "Srinagar", review: "“Really happy with my visit. The pastries were fresh, the place was clean and peaceful, and the overall experience was totally worth it.”", alt: "Reviewer 4" }]
-
 let menuButton = document.querySelector(".navbar__mobile__icon");
 let sidebar = document.querySelector(".sidebar");
 let sidebarOverlay = document.querySelector(".sidebar__overlay");
 let orderOnlineButton1 = document.querySelector(".order__online__button__1")
-let reviewImg = document.querySelector(".what__they__say__profile__img");
-let review = document.querySelector(".review");
-let username = document.querySelector(".what__they__say__username");
-let city = document.querySelector(".what__they__say__city");
+
 
 let currentReviewIndex = 0;
 
@@ -40,12 +35,34 @@ let navbarOrderButton = document.querySelectorAll(".navbar__order");
 navbarOrderButton.forEach((button) => {
     button.addEventListener('click', () => {
         window.open('https://wa.me/+918085679315');
+        closeSidebar();
     })
 });
+
+let navLinks = document.querySelectorAll(".navbar__products, .navbar__about, .navbar__reviews, .navbar__contact");
+
+navLinks.forEach((button) => {
+    button.addEventListener('click', () => {
+        closeSidebar();
+    })
+})
 
 orderOnlineButton1.addEventListener('click', () => {
     window.open('https://wa.me/+918085679315');
 })
+
+let heroButton = document.querySelector(".hero__button");
+
+heroButton.addEventListener('click', () => {
+    document.querySelector("#products").scrollIntoView({ behavior: "smooth" })
+})
+
+let reviews = [{ img: "assets/images/reviewer-1.jpg", name: "Ishita Singh", city: "Ahmedabad", review: "“The cakes were really fresh and tasty, and the staff was very polite. Overall, I had a very nice experience here.”", alt: "Reviewer 1" }, { img: "assets/images/reviewer-2.jpg", name: "Karan Gokhale", city: "Mumbai", review: "“Loved the ambience and the quality of bakery items. Everything was fresh, nicely presented, and the service was also very good.”", alt: "Reviewer 2" }, { img: "assets/images/reviewer-3.jpg", name: "Prashant Dubey", city: "Cochin", review: "“I ordered a cake for my family and everyone loved it. Taste was excellent, delivery was on time, and the staff was very helpful.”", alt: "Reviewer 3" }, { img: "assets/images/reviewer-4.jpg", name: "Preeti Prajapati", city: "Srinagar", review: "“Really happy with my visit. The pastries were fresh, the place was clean and peaceful, and the overall experience was totally worth it.”", alt: "Reviewer 4" }]
+
+let reviewImg = document.querySelector(".what__they__say__profile__img");
+let review = document.querySelector(".review");
+let username = document.querySelector(".what__they__say__username");
+let city = document.querySelector(".what__they__say__city");
 
 function renderReviewCards() {
     reviewImg.src = reviews[currentReviewIndex].img

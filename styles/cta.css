@@ -1,3 +1,7 @@
+.cta {
+    position: relative;
+}
+
 .cta__heading {
     font-family: var(--font-heading);
     font-weight: bold;
@@ -59,6 +63,15 @@
     background-color: var(--color-primary);
     padding: clamp(12px, 3vw, 14px) clamp(24px, 4vw, 24px);
     cursor: pointer;
+}
+
+.cta__sketch {
+    width: clamp(120px, 15vw, 200px);
+    filter: opacity(0.3);
+    position: absolute;
+    top: 105%;
+    right: -2rem;
+    z-index: 0;
 }
 
 @media (min-width: 1024px) {

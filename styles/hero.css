@@ -142,6 +142,7 @@ header {
     font-family: var(--font-body);
     background-color: var(--color-primary);
     padding: clamp(8px, 2vw, 16px) clamp(12px, 4vw, 24px);
+    cursor: pointer;
 }
 
 @media (min-width: 560px) {
