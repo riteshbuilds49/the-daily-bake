@@ -3,7 +3,6 @@ let sidebar = document.querySelector(".sidebar");
 let sidebarOverlay = document.querySelector(".sidebar__overlay");
 let orderOnlineButton1 = document.querySelector(".order__online__button__1")
 
-
 let currentReviewIndex = 0;
 
 function openSidebar() {

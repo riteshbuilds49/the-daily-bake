@@ -83,6 +83,11 @@ header {
     height: var(--space-32);
 }
 
+.sidebar__search__input:focus {
+    border: 1.5px solid var(--color-primary);
+    outline: none;
+}
+
 .sidebar__heading {
     font-family: var(--font-heading);
     font-weight: 600;
