@@ -1,0 +1,160 @@
+footer {
+    position: relative;
+    background-color: var(--color-card);
+    height: clamp(48rem, 45.136rem + 14.318vi, 52rem);
+    margin-top: clamp(7.5rem, 7.053rem + 2.237vi, 8.125rem);
+    overflow-y: hidden;
+}
+
+.footer__container__1 {
+    margin-top: 2rem;
+}
+
+.footer__logo__container {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__logo {
+    width: clamp(9.375rem, 8.928rem + 2.237vi, 10rem);
+    height: auto;
+}
+
+.footer__links__container {
+    margin-top: clamp(3.125rem, 2.946rem + 0.895vi, 3.375rem);
+    display: grid;
+    grid-template-columns: repeat(2, clamp(9.375rem, 8.928rem + 2.237vi, 10rem));
+    row-gap: clamp(1.25rem, 1.116rem + 0.671vi, 1.438rem);
+    column-gap: clamp(0.125rem, -0.143rem + 1.342vi, 0.5rem);
+    justify-content: center;
+    justify-items: center;
+}
+
+.footer__links__container li {
+    list-style: none;
+}
+
+.footer__links__container li a {
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 0.911rem + 0.447vi, 1.125rem);
+    text-decoration: none;
+    color: var(--color-text);
+}
+
+.footer__container__2 {
+    margin-top: clamp(3.125rem, 2.946rem + 0.895vi, 3.375rem);
+}
+
+.shop__details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(1.25rem, 1.161rem + 0.447vi, 1.375rem);
+}
+
+.timing,
+.number,
+.mail {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.75rem, 0.661rem + 0.447vi, 0.875rem);
+}
+
+.timing img,
+.number img,
+.mail img {
+    width: clamp(1.25rem, 1.071rem + 0.895vi, 1.5rem);
+    height: auto;
+}
+
+.timing p,
+.number p,
+.mail p {
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 0.933rem + 0.336vi, 1.094rem);
+    color: var(--color-text);
+}
+
+.shop__social__links {
+    margin-top: clamp(3.125rem, 2.946rem + 0.895vi, 3.375rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(1.875rem, 1.428rem + 2.237vi, 2.5rem);
+}
+
+.whatsapp__button,
+.facebook__button,
+.instagram__button {
+    width: clamp(3.125rem, 2.812rem + 1.566vi, 3.563rem);
+    height: clamp(3.125rem, 2.812rem + 1.566vi, 3.563rem);
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whatsapp__button img,
+.facebook__button img,
+.instagram__button img {
+    width: clamp(1.875rem, 1.562rem + 1.566vi, 2.313rem);
+    height: auto;
+}
+
+.footer__container__3 {
+    margin-top: clamp(3.125rem, 2.946rem + 0.895vi, 3.375rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__container__3 p {
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 0.911rem + 0.447vi, 1.125rem);
+}
+
+.footer__container__3 input {
+    margin-top: clamp(1.25rem, 1.161rem + 0.447vi, 1.375rem);
+    width: clamp(11.25rem, 10.355rem + 4.474vi, 12.5rem);
+    height: clamp(1.875rem, 1.741rem + 0.671vi, 2.063rem);
+    border: 1px solid var(--color-primary);
+    border-radius: 1.2rem;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--color-text);
+    padding: clamp(0.375rem, -0.072rem + 2.237vi, 1rem) clamp(0.5rem, 0.321rem + 0.895vi, 0.75rem);
+    outline: none;
+}
+
+.footer__container__3 input:focus {
+    border: 2px solid var(--color-primary);
+    outline: none;
+}
+
+.footer__container__3 button {
+    margin-top: clamp(1.25rem, 1.161rem + 0.447vi, 1.375rem);
+    border: none;
+    border-radius: 1.25rem;
+    color: var(--color-card);
+    font-size: clamp(0.875rem, 0.741rem + 0.671vi, 1.063rem);
+    font-family: var(--font-body);
+    background-color: var(--color-primary);
+    padding: clamp(0.5rem, 0.411rem + 0.447vi, 0.625rem) clamp(1.125rem, 0.991rem + 0.671vi, 1.313rem);
+    cursor: pointer;
+}
+
+.footer__sketch {
+    width: clamp(120px, 15vw, 200px);
+    filter: opacity(0.3);
+    position: absolute;
+    top: 86%;
+    left: -1.5rem;
+    transform: rotateZ(20deg);
+    z-index: 0;
+}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 1024px) {}
