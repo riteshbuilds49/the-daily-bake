@@ -151,3 +151,6 @@ ctaOrderButtonPc.addEventListener('click', () => {
     window.open('https://wa.me/+918085679315');
 })
 
+// Changes year automatically of copyright
+document.getElementById("year").textContent = new Date().getFullYear();
+

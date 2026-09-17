@@ -1,7 +1,7 @@
 footer {
     position: relative;
     background-color: var(--color-card);
-    height: clamp(48rem, 45.136rem + 14.318vi, 52rem);
+    height: clamp(52rem, 45.976rem + 12.549vi, 54rem);
     margin-top: clamp(7.5rem, 7.053rem + 2.237vi, 8.125rem);
     overflow-y: hidden;
 }
@@ -149,17 +149,32 @@ footer {
     cursor: pointer;
 }
 
+.copyright {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.copyright p {
+    font-family: var(--font-body);
+    font-size: clamp(0.75rem, 0.661rem + 0.447vi, 0.875rem);
+}
+
 .footer__sketch {
     width: clamp(120px, 15vw, 200px);
     filter: opacity(0.3);
     position: absolute;
-    top: 86%;
+    top: 90%;
     left: -1.5rem;
     transform: rotateZ(20deg);
     z-index: 0;
 }
 
 @media (min-width: 768px) {
+
+    footer {
+        height: clamp(50rem, 37.953rem + 25.098vi, 54rem);
+    }
 
     .footer__primary__container {
         display: flex;
@@ -255,6 +270,10 @@ footer {
         padding: 10px clamp(1.313rem, 0.936rem + 0.784vi, 1.438rem);
     }
 
+    .copyright p {
+        font-size: clamp(0.875rem, 0.499rem + 0.784vi, 1rem);
+    }
+
     .footer__sketch {
         top: 84%;
         left: -1rem;
@@ -266,7 +285,7 @@ footer {
 @media (min-width: 1024px) {
     footer {
         margin-top: 11.25rem;
-        height: 20rem;
+        height: 22rem;
     }
 
     .footer__primary__container {
@@ -364,6 +383,17 @@ footer {
         margin-top: clamp(1.25rem, 0.74rem + 0.797vi, 1.5rem);
         font-size: clamp(1rem, 0.809rem + 0.299vi, 1.094rem);
         padding: 0.5rem clamp(1.25rem, 0.995rem + 0.398vi, 1.375rem);
+    }
+
+    .copyright {
+        margin-top: 3.125rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .copyright p {
+        font-family: var(--font-body);
+        font-size: 16px;
     }
 
     .footer__sketch {
