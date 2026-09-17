@@ -8,6 +8,8 @@ footer {
 
 .footer__container__1 {
     margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer__logo__container {
@@ -43,6 +45,8 @@ footer {
 
 .footer__container__2 {
     margin-top: clamp(3.125rem, 2.946rem + 0.895vi, 3.375rem);
+    display: flex;
+    flex-direction: column;
 }
 
 .shop__details {
@@ -155,6 +159,103 @@ footer {
     z-index: 0;
 }
 
-@media (min-width: 768px) {}
+@media (min-width: 768px) {
+
+    .footer__container__1 {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .footer__logo {
+        width: clamp(10rem, 2.471rem + 15.686vi, 12.5rem);
+    }
+
+    .footer__links__container {
+        grid-template-columns: repeat(2, clamp(10rem, 4.353rem + 11.765vi, 11.875rem));
+        row-gap: clamp(1.438rem, 0.685rem + 1.569vi, 1.688rem);
+        column-gap: clamp(0.5rem, -2.135rem + 5.49vi, 1.375rem);
+    }
+
+    .footer__links__container li a {
+        font-size: clamp(1.125rem, 0.843rem + 0.588vi, 1.219rem);
+    }
+
+    .footer__container__2 {
+        margin-top: clamp(3.375rem, 1.493rem + 3.922vi, 4rem);
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .shop__details {
+        justify-content: center;
+        gap: clamp(2.5rem, 1.371rem + 2.353vi, 2.875rem);
+    }
+
+    .timing,
+    .number,
+    .mail {
+        gap: clamp(0.75rem, -0.003rem + 1.569vi, 1rem);
+    }
+
+    .timing img,
+    .number img,
+    .mail img {
+        width: clamp(1.75rem, 1.374rem + 0.784vi, 1.875rem);
+    }
+
+    .timing p,
+    .number p,
+    .mail p {
+        font-size: clamp(1.25rem, 0.874rem + 0.784vi, 1.375rem);
+    }
+
+    .shop__social__links {
+        margin-top: 0rem;
+        flex-direction: column;
+        gap: clamp(1.375rem, 0.999rem + 0.784vi, 1.5rem);
+    }
+
+    .whatsapp__button,
+    .facebook__button,
+    .instagram__button {
+        width: clamp(3.5rem, 2.747rem + 1.569vi, 3.75rem);
+        height: clamp(3.5rem, 2.747rem + 1.569vi, 3.75rem);
+    }
+
+    .whatsapp__button img,
+    .facebook__button img,
+    .instagram__button img {
+        width: clamp(2.25rem, 1.874rem + 0.784vi, 2.375rem);
+    }
+
+    .footer__container__3 {
+        margin-top: clamp(3.375rem, 1.493rem + 3.922vi, 4rem);
+    }
+
+    .footer__container__3 p {
+        font-size: clamp(1.25rem, 0.874rem + 0.784vi, 1.375rem);
+    }
+
+    .footer__container__3 input {
+        width: clamp(13.75rem, 9.985rem + 7.843vi, 15rem);
+        height: 34px;
+        font-size: clamp(1.063rem, 0.874rem + 0.392vi, 1.125rem);
+        border-radius: clamp(1.375rem, 0.999rem + 0.784vi, 1.5rem);
+        padding: clamp(1.25rem, 1.062rem + 0.392vi, 1.313rem) clamp(0.75rem, 0.374rem + 0.784vi, 0.875rem);
+    }
+
+    .footer__container__3 button {
+        margin-top: clamp(1.375rem, 0.999rem + 0.784vi, 1.5rem);
+        font-size: clamp(1.063rem, 0.837rem + 0.471vi, 1.137rem);
+        padding: 10px clamp(1.313rem, 0.936rem + 0.784vi, 1.438rem);
+    }
+
+    .footer__sketch {
+        top: 84%;
+        left: -1rem;
+        transform: rotateZ(20deg);
+    }
+
+}
 
 @media (min-width: 1024px) {}
