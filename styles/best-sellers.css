@@ -40,14 +40,14 @@
     flex-direction: column;
 }
 
-.best__sellers__text__section h4 {
+.best__sellers__text__section h3 {
     font-family: var(--font-heading);
     color: var(--color-primary);
     font-size: clamp(20px, 5vw, 26px);
     position: relative;
 }
 
-.best__sellers__text__section h4::after {
+.best__sellers__text__section h3::after {
     content: "";
     position: absolute;
     width: clamp(140px, 30vw, 170px);

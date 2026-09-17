@@ -119,6 +119,7 @@ footer {
     font-size: clamp(1rem, 0.911rem + 0.447vi, 1.125rem);
 }
 
+
 .footer__container__3 input {
     margin-top: clamp(1.25rem, 1.161rem + 0.447vi, 1.375rem);
     width: clamp(11.25rem, 10.355rem + 4.474vi, 12.5rem);
@@ -160,6 +161,11 @@ footer {
 }
 
 @media (min-width: 768px) {
+
+    .footer__primary__container {
+        display: flex;
+        flex-direction: column;
+    }
 
     .footer__container__1 {
         flex-direction: row;
@@ -258,4 +264,110 @@ footer {
 
 }
 
-@media (min-width: 1024px) {}
+@media (min-width: 1024px) {
+    footer {
+        margin-top: 11.25rem;
+        height: 20rem;
+    }
+
+    .footer__primary__container {
+        margin-top: clamp(3.125rem, 1.34rem + 2.789vi, 4rem);
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: start;
+        gap: 0px;
+    }
+
+    .footer__container__1 {
+        margin-top: 0rem;
+        flex-direction: row;
+        gap: clamp(1.25rem, -6.399rem + 11.952vi, 5rem);
+    }
+
+    .footer__logo {
+        width: clamp(10rem, 6.175rem + 5.976vi, 11.875rem);
+    }
+
+    .footer__links__container {
+        margin-top: 0rem;
+        grid-template-columns: repeat(2, clamp(9rem, 6.96rem + 3.187vi, 10rem));
+        row-gap: clamp(1.438rem, 0.8rem + 0.996vi, 1.75rem);
+        column-gap: clamp(0.5rem, -0.01rem + 0.797vi, 0.75rem);
+        align-items: center;
+    }
+
+    .footer__links__container li a {
+        font-size: clamp(1rem, 0.49rem + 0.797vi, 1.25rem);
+    }
+
+    .footer__container__2 {
+        margin-top: 0rem;
+        flex-direction: column;
+        gap: clamp(1.5rem, 0.735rem + 1.195vi, 1.875rem);
+    }
+
+    .shop__details {
+        gap: clamp(1.25rem, 0.74rem + 0.797vi, 1.5rem);
+    }
+
+    .timing,
+    .number,
+    .mail {
+        gap: clamp(0.875rem, 0.62rem + 0.398vi, 1rem);
+    }
+
+    .timing img,
+    .number img,
+    .mail img {
+        width: clamp(1.5rem, 1.245rem + 0.398vi, 1.625rem);
+    }
+
+    .timing p,
+    .number p,
+    .mail p {
+        font-size: clamp(1rem, 0.745rem + 0.398vi, 1.125rem);
+    }
+
+    .shop__social__links {
+        flex-direction: row;
+    }
+
+    .whatsapp__button,
+    .facebook__button,
+    .instagram__button {
+        width: clamp(2.5rem, 1.48rem + 1.594vi, 3rem);
+        height: clamp(2.5rem, 1.48rem + 1.594vi, 3rem);
+    }
+
+    .whatsapp__button img,
+    .facebook__button img,
+    .instagram__button img {
+        width: clamp(1.625rem, 1.37rem + 0.398vi, 1.75rem);
+    }
+
+    .footer__container__3 {
+        margin-top: 0rem;
+    }
+
+    .footer__container__3 p {
+        font-size: clamp(1rem, 0.745rem + 0.398vi, 1.125rem);
+    }
+
+    .footer__container__3 input {
+        margin-top: clamp(1.25rem, 0.74rem + 0.797vi, 1.5rem);
+        width: clamp(10rem, 4.9rem + 7.968vi, 12.5rem);
+        height: 2.375rem;
+        font-size: clamp(0.75rem, 0.431rem + 0.498vi, 0.906rem);
+        padding: clamp(0.875rem, 0.493rem + 0.598vi, 1.063rem) clamp(0.438rem, -0.2rem + 0.996vi, 0.75rem);
+    }
+
+    .footer__container__3 button {
+        margin-top: clamp(1.25rem, 0.74rem + 0.797vi, 1.5rem);
+        font-size: clamp(1rem, 0.809rem + 0.299vi, 1.094rem);
+        padding: 0.5rem clamp(1.25rem, 0.995rem + 0.398vi, 1.375rem);
+    }
+
+    .footer__sketch {
+        top: 60%;
+    }
+}

@@ -90,7 +90,7 @@
     z-index: 1;
 }
 
-.benifits li h4 {
+.benifits li h3 {
     font-family: var(--font-heading);
     font-size: clamp(18px, 4vw, 22px);
     color: var(--color-text);
