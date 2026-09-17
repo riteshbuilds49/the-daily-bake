@@ -50,7 +50,7 @@
     font-family: var(--font-body);
     font-size: clamp(16px, 3.5vw, 22px);
     text-align: center;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--color-text);
 }
 
@@ -99,7 +99,7 @@
         font-family: var(--font-body);
         font-size: clamp(1.5rem, 0.99rem + 0.797vw, 1.75rem);
         text-align: start;
-        font-weight: 500;
+        font-weight: 400;
         color: var(--color-text);
     }
 

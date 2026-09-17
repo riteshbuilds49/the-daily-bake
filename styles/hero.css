@@ -129,6 +129,8 @@ header {
     line-height: 1.1;
     margin-bottom: clamp(12px, 3vw, 26px);
     width: clamp(175px, 40vw, 800px);
+    transition: transform 1s ease-in-out 0.5s;
+    transform: translateX(-600px);
 }
 
 .hero__desc {
@@ -137,6 +139,8 @@ header {
     color: var(--color-text);
     margin-bottom: clamp(16px, 4vw, 36px);
     width: clamp(175px, 44vw, 600px);
+    transition: transform 1s ease-in-out 0.6s;
+    transform: translateX(-600px);
 }
 
 .hero__button {
@@ -148,6 +152,8 @@ header {
     background-color: var(--color-primary);
     padding: clamp(8px, 2vw, 16px) clamp(12px, 4vw, 24px);
     cursor: pointer;
+    transition: transform 1s ease-in-out 0.75s;
+    transform: translateX(-600px);
 }
 
 @media (min-width: 560px) {

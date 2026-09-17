@@ -119,7 +119,6 @@ footer {
     font-size: clamp(1rem, 0.911rem + 0.447vi, 1.125rem);
 }
 
-
 .footer__container__3 input {
     margin-top: clamp(1.25rem, 1.161rem + 0.447vi, 1.375rem);
     width: clamp(11.25rem, 10.355rem + 4.474vi, 12.5rem);

@@ -29,6 +29,14 @@ menuButton.addEventListener("click", () => {
 
 sidebarOverlay.addEventListener("click", closeSidebar);
 
+// Adding animations to hero elements
+document.addEventListener('DOMContentLoaded', () => {
+    let elements = document.querySelectorAll(".hero__title, .hero__desc, .hero__button");
+    elements.forEach((element) => {
+        element.style.transform = "translateX(0px)";
+    });
+})
+
 let navbarOrderButton = document.querySelectorAll(".navbar__order");
 
 navbarOrderButton.forEach((button) => {
@@ -50,6 +58,7 @@ orderOnlineButton1.addEventListener('click', () => {
     window.open('https://wa.me/+918085679315');
 })
 
+// Scrolling page to products section
 let heroButton = document.querySelector(".hero__button");
 
 heroButton.addEventListener('click', () => {
