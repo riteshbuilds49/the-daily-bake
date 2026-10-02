@@ -79,9 +79,6 @@ function setupAutocomplete(input) {
 
         if (!wrap.contains(e.target)) {
             list.innerHTML = "";
-            input.value = ""
-            searchInput.style.display = "none"
-            searchButton.style.display = "block"
         }
     });
 }
@@ -90,7 +87,6 @@ function setupAutocomplete(input) {
 searchInputs.forEach((input) => {
     setupAutocomplete(input);
 });
-
 
 
 function openSidebar() {
