@@ -6,13 +6,91 @@ let orderOnlineButton1 = document.querySelector(".order__online__button__1")
 let currentReviewIndex = 0;
 
 let searchButton = document.querySelector(".navbar__search__img");
+let searchInput = document.querySelector(".navbar__search__input")
 
 searchButton.addEventListener('click', () => {
-    let searchInput = document.querySelector(".navbar__search__input")
     searchButton.style.display = "none"
     searchInput.style.display = "block"
     searchInput.focus()
 })
+
+// Adding autocomplete
+// Dono inputs ko ek saath pakdo (PC aur mobile)
+const searchInputs = document.querySelectorAll(
+    ".navbar__search__input, .sidebar__search__input"
+);
+
+// Har input ke liye same function chalega, isliye code ek hi baar likhna pada
+function setupAutocomplete(input) {
+    // Input ke around ek wrapper banao (dropdown isi ke hisaab se position hoga)
+    const wrap = document.createElement("div");
+    wrap.className = "search-wrap";
+    input.before(wrap);   // wrapper ko input ki jagah pe rakho
+    wrap.appendChild(input); // input ko wrapper ke andar le jao
+
+    // Suggestions ki list ab wrapper ke andar, input ke baad
+    const list = document.createElement("ul");
+    list.className = "suggestions";
+    input.after(list);
+
+    // Jab bhi user kuch type kare (har key pe chalta hai)
+    input.addEventListener("input", () => {
+        // Jo likha hai usko lowercase kar do, taaki "CAKE" aur "cake" same maane jayein
+        const query = input.value.trim().toLowerCase();
+
+        // Purani suggestions saaf karo
+        list.innerHTML = "";
+
+        // Agar input khali hai to yahin ruk jao, kuch dikhane ki zaroorat nahi
+        if (!query) return;
+
+        // products array mein se wahi rakho jinke naam mein query aati hai
+        const matches = products.filter((p) =>
+            p.name.toLowerCase().includes(query)
+        );
+
+        if (matches.length === 0) {
+            const li = document.createElement("li")
+            li.textContent = "No Products Found"
+            li.className = "no-result"
+            list.appendChild(li)
+            return;
+        }
+
+        // Har match ke liye ek <li> banao aur list mein daalo
+        matches.forEach((p) => {
+            const li = document.createElement("li");
+            li.className = "suggestion-item";
+            li.textContent = `${p.name}`;
+
+            // Click karne pe: naam input mein daalo aur list band karo
+            li.addEventListener("click", () => {
+                input.value = p.name;
+                list.innerHTML = "";
+            });
+
+            list.appendChild(li);
+        });
+    });
+
+    // Hide search bar when clicked outside
+    document.addEventListener("click", (e) => {
+        if (e.target === searchButton) return;
+
+        if (!wrap.contains(e.target)) {
+            list.innerHTML = "";
+            input.value = ""
+            searchInput.style.display = "none"
+            searchButton.style.display = "block"
+        }
+    });
+}
+
+// Dono inputs pe autocomplete lagao
+searchInputs.forEach((input) => {
+    setupAutocomplete(input);
+});
+
 
 
 function openSidebar() {
