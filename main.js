@@ -5,6 +5,16 @@ let orderOnlineButton1 = document.querySelector(".order__online__button__1")
 
 let currentReviewIndex = 0;
 
+let searchButton = document.querySelector(".navbar__search__img");
+
+searchButton.addEventListener('click', () => {
+    let searchInput = document.querySelector(".navbar__search__input")
+    searchButton.style.display = "none"
+    searchInput.style.display = "block"
+    searchInput.focus()
+})
+
+
 function openSidebar() {
     sidebar.classList.add("sidebar--isopen");
     sidebarOverlay.classList.add("sidebar--isopen");
