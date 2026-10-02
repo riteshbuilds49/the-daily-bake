@@ -192,7 +192,7 @@
         bottom: 0;
         left: 52%;
         width: 2px;
-        background-color: var(--color-text);
+        background-color: var(--color-primary);
         transform: translateX(-50%);
     }
 
@@ -204,7 +204,7 @@
         right: 85px;
         top: 52%;
         height: 2px;
-        background-color: var(--color-text);
+        background-color: var(--color-primary);
         transform: translateY(-50%);
     }
 
