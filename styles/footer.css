@@ -25,7 +25,7 @@ footer {
 .footer__links__container {
     margin-top: clamp(3.125rem, 2.946rem + 0.895vi, 3.375rem);
     display: grid;
-    grid-template-columns: repeat(2, clamp(9.375rem, 8.928rem + 2.237vi, 10rem));
+    grid-template-columns: repeat(1, clamp(9.375rem, 8.928rem + 2.237vi, 10rem));
     row-gap: clamp(1.25rem, 1.116rem + 0.671vi, 1.438rem);
     column-gap: clamp(0.125rem, -0.143rem + 1.342vi, 0.5rem);
     justify-content: center;
@@ -191,7 +191,7 @@ footer {
     }
 
     .footer__links__container {
-        grid-template-columns: repeat(2, clamp(10rem, 4.353rem + 11.765vi, 11.875rem));
+        grid-template-columns: repeat(1, clamp(10rem, 4.353rem + 11.765vi, 11.875rem));
         row-gap: clamp(1.438rem, 0.685rem + 1.569vi, 1.688rem);
         column-gap: clamp(0.5rem, -2.135rem + 5.49vi, 1.375rem);
     }
@@ -299,7 +299,7 @@ footer {
     .footer__container__1 {
         margin-top: 0rem;
         flex-direction: row;
-        gap: clamp(1.25rem, -6.399rem + 11.952vi, 5rem);
+        gap: clamp(2.5rem, -7.699rem + 15.936vi, 7.5rem);
     }
 
     .footer__logo {
@@ -308,7 +308,7 @@ footer {
 
     .footer__links__container {
         margin-top: 0rem;
-        grid-template-columns: repeat(2, clamp(9rem, 6.96rem + 3.187vi, 10rem));
+        grid-template-columns: repeat(1, clamp(9rem, 6.96rem + 3.187vi, 10rem));
         row-gap: clamp(1.438rem, 0.8rem + 0.996vi, 1.75rem);
         column-gap: clamp(0.5rem, -0.01rem + 0.797vi, 0.75rem);
         align-items: center;
