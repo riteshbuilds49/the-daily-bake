@@ -73,6 +73,16 @@
     gap: clamp(38px, 7vw, 96px);
 }
 
+.product__row {
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: var(--radius-sm);
+}
+
+.highlight {
+    background-color: var(--color-bg);
+    box-shadow: 0 0 0 12px var(--color-bg);
+}
+
 .product__row dt,
 .product__row dd {
     font-family: var(--font-body);

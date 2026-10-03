@@ -14,6 +14,20 @@ searchButton.addEventListener('click', () => {
     searchInput.focus()
 })
 
+// Scrolling to product and highlighting it
+function goToProduct(id) {
+    const row = document.getElementById("product-" + id)
+    row.classList.add("highlight");
+
+    if (!row) return;
+
+    closeSidebar();
+
+    row.scrollIntoView({ behavior: "smooth", block: "center" })
+
+    setTimeout(() => row.classList.remove("highlight"), 1500);
+}
+
 // Adding autocomplete
 // Dono inputs ko ek saath pakdo (PC aur mobile)
 const searchInputs = document.querySelectorAll(
@@ -48,7 +62,7 @@ function setupAutocomplete(input) {
         const matches = products.filter((p) =>
             p.name.toLowerCase().includes(query)
         );
-        
+
         if (matches.length === 0) {
             const li = document.createElement("li")
             li.textContent = "No Products Found"
@@ -67,6 +81,7 @@ function setupAutocomplete(input) {
             li.addEventListener("click", () => {
                 input.value = p.name;
                 list.innerHTML = "";
+                goToProduct(p.id);
             });
 
             list.appendChild(li);
