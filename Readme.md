@@ -1,18 +1,25 @@
 # The Daily Bake
 
-A responsive single-page bakery landing page built as my first web development project.
+A responsive bakery website built as my first web development project, with product search and WhatsApp ordering.
+
+**Live demo:** https://your-link.vercel.app
 
 ## Features
 
-- Responsive design
+- Responsive design (desktop and mobile)
 - Animated hero text
-- Single-page layout
+- Product search with autocomplete suggestions (works on both desktop and mobile)
+- Click a suggestion to smoothly scroll to the product and highlight it
+- "No products found" message when nothing matches
+- Order via WhatsApp chat redirect
+- Privacy Policy page
+- Basic SEO (page title and meta description)
 
 ## Tech Stack
 
 - HTML
 - CSS
-- JavaScript
+- JavaScript (vanilla)
 
 ## Credits
 
