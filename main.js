@@ -26,7 +26,7 @@ function setupAutocomplete(input) {
     const wrap = document.createElement("div");
     wrap.className = "search-wrap";
     input.before(wrap);   // wrapper ko input ki jagah pe rakho
-    wrap.appendChild(input); // input ko wrapper ke andar le jao
+    wrap.append(input); // input ko wrapper ke andar le jao
 
     // Suggestions ki list ab wrapper ke andar, input ke baad
     const list = document.createElement("ul");
@@ -48,7 +48,7 @@ function setupAutocomplete(input) {
         const matches = products.filter((p) =>
             p.name.toLowerCase().includes(query)
         );
-
+        
         if (matches.length === 0) {
             const li = document.createElement("li")
             li.textContent = "No Products Found"
@@ -104,11 +104,11 @@ function closeSidebar() {
 }
 
 menuButton.addEventListener("click", () => {
-    if (sidebar.classList.contains("sidebar--isopen")) {
-        closeSidebar();
-    } else {
-        openSidebar();
-    }
+    // if (sidebar.classList.contains("sidebar--isopen")) {
+    //     closeSidebar();
+    // } else {
+    openSidebar();
+    // }
 });
 
 sidebarOverlay.addEventListener("click", closeSidebar);
